@@ -79,6 +79,16 @@ export AWS_DEFAULT_REGION=eu-central-1
 export AWSUME_PROFILE=dev
 ```
 
+### Use the awsume console plugin to generate a url to the console
+Related docs: https://github.com/trek10inc/awsume-console-plugin
+```
+host> docker run --rm -it -v ~/.aws:/root/.aws/ gesellix/awsume # run the container's shell
+
+> awsume dev -cl
+> awsume dev -csl cfn # go directly to cloudformation
+```
+
+
 ## Build the Docker image
 
 If you want to change the Docker image for your specific needs, you'll need to change the relevant files, e.g. `Dockerfile`, and rebuild the image:

@@ -20,6 +20,7 @@ ENV PATH=/root/.local/bin:$PATH
 # awsume won't set AWS_* env variables when installed via pip
 RUN pipx install awscli \
     && pipx install awsume \
+    && pipx inject awsume awsume-console-plugin \
     && awsume-configure --shell bash --autocomplete-file ~/.bashrc --alias-file ~/.bashrc
 
 ENTRYPOINT ["bash"]
