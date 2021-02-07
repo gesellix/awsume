@@ -84,8 +84,8 @@ Related docs: https://github.com/trek10inc/awsume-console-plugin
 ```
 host> docker run --rm -it -v ~/.aws:/root/.aws/ gesellix/awsume # run the container's shell
 
-> awsume dev -cl
-> awsume dev -csl cfn # go directly to cloudformation
+> awsume <profile> -cl
+> awsume <profile> -csl cfn # go directly to cloudformation
 ```
 
 
